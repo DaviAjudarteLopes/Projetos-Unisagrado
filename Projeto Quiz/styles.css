@@ -1,0 +1,163 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-image: url('https://static.vecteezy.com/system/resources/previews/014/518/748/non_2x/yellow-question-mark-background-with-text-space-quiz-symbol-vector.jpg'); /* Imagem de fundo */
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hero {
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    text-align: center;
+}
+
+.container {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 400px;
+    width: 90%;
+}
+
+.hidden {
+    display: none;
+}
+
+#choices {
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0;
+}
+
+button {
+    margin: 10px 0;
+    padding: 18px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s; /* Adicionando animação */
+}
+
+button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05); /* Efeito de aumento ao passar o mouse */
+}
+
+button:active {
+    transform: scale(0.95); /* Efeito de diminuição ao clicar */
+}
+
+#feedback {
+    margin: 20px 0;
+    font-weight: bold;
+}
+
+@media (max-width: 500px) {
+    .hero {
+        height: 200px;
+    }
+
+    .container {
+        padding: 15px;
+    }
+
+    button {
+        padding: 8px;
+    }
+}
+
+.correct {
+    background-color: green !important; /* Para resposta correta */
+}
+
+.wrong {
+    background-color: red !important; /* Para resposta errada */
+}
+
+.timer-expired {
+    animation: shake 0.5s;
+}
+
+@keyframes blink {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+}
+
+.warning {
+    color: red; /* Cor do texto */
+    animation: blink 1s infinite; /* Adiciona animação */
+}
+
+@keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+.fade-in {
+    animation: fadeIn 1s;
+}
+
+#result {
+    font-size: 24px; /* Ajuste o tamanho da fonte conforme necessário */
+    text-align: center; /* Centraliza o texto */
+    margin-top: 20px; /* Espaço acima do resultado */
+}
+
+#score {
+    font-size: 28px; 
+    font-weight: bold; 
+}
+
+#ad {
+    position: fixed; 
+    bottom: 0; 
+    left: 0; 
+    right: 0; 
+    margin: 0; 
+    padding: 15px; 
+    background-image: url('carros.png'); 
+    border-top: 1px solid #000000; 
+    text-align: center; 
+    box-shadow: 0 -2px 5px rgb(8, 8, 8); 
+    
+}
+
+#ad a {
+    color: #007BFF; 
+    text-decoration: none; 
+    font-weight: bold; 
+}
+
+#ad a:hover {
+    text-decoration: underline; 
+}
+
+.cor {
+    color: white; 
+}
+
+
